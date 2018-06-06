@@ -3,18 +3,13 @@
 		<title>my first django app</title>
 	</head>
 	<body>
+
+{% for post in posts %}
 		<div>
-			<h1><a href="">Django blog</a></h1>
+			<p>published: {{ post.published_date }}</p>
+			<h2><a href="">{{ post.title }}</a></h2>
+			<p>{{ post.text|linebreaksbr }}</p>
 		</div>
-		<div>
-			<p>published: 180606</p>
-			<h2><a href="">My first post</a></h2>
-			<p>blah blah</p>
-		</div>
-		<div>
-			<p>published: 180606</p>
-			<h2><a href="">My first post</a></h2>
-			<p>blah blah</p>
-		</div>
+{% endfor %}
 	</body>
 </html>
